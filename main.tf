@@ -45,3 +45,15 @@ resource "aws_subnet" "logic" {
     Name = "Sarath_Private"
   }
 }
+resource "aws_route_table_association" "a" {
+  subnet_id      = "subnet-0729db33d757804bf"
+  route_table_id = "rtb-02571de346893d03a"
+}
+resource "aws_route_table_association" "c" {
+  subnet_id      = "subnet-07283665af9088b73"
+  route_table_id = "rtb-02571de346893d03a"
+}
+resource "aws_route_table_association" "b" {
+  subnet_id      = "subnet-07bb4d45b9d15a8ff"
+  route_table_id = "rtb-02571de346893d03a"
+}
