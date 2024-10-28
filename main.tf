@@ -15,7 +15,7 @@ resource "aws_route_table" "example" {
     vpc_id = "vpc-0cbbf95b2ff5f575a"
     route {
         cidr_block = "0.0.0.0/0"
-        gateway_id = "var.vpc-gateway"
+        gateway_id = "igw-06b2beccfca006d1e"
     }
     tags = {
         Name = "Sarath_RT"
@@ -47,13 +47,13 @@ resource "aws_subnet" "logic" {
 }
 resource "aws_route_table_association" "a" {
   subnet_id      = "subnet-0729db33d757804bf"
-  route_table_id = "rtb-02571de346893d03a"
+  route_table_id = "rtb-07a1a9aff726d91af"
 }
 resource "aws_route_table_association" "c" {
   subnet_id      = "subnet-07283665af9088b73"
-  route_table_id = "rtb-02571de346893d03a"
+  route_table_id = "rtb-07a1a9aff726d91af"
 }
 resource "aws_route_table_association" "b" {
   subnet_id      = "subnet-07bb4d45b9d15a8ff"
-  route_table_id = "rtb-02571de346893d03a"
+  route_table_id = "rtb-07a1a9aff726d91af"
 }
