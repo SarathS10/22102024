@@ -5,7 +5,7 @@ resource "aws_vpc" "VPC" {
   }
 }
 resource "aws_internet_gateway" "IGW" {
-  vpc_id ="vpc-0cbbf95b2ff5f575a"
+  vpc_id ="var.vpc_IGW"
   tags = {
     Name = "Internet Gateway"
   }
