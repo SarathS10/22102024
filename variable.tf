@@ -10,7 +10,4 @@ variable "region" {
   type = string
   default = "us-east-1"
 }
-variable "number_Cr" {
-  type = string
-  default = "10.0.3.0/24"
-}
+
