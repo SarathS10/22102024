@@ -17,6 +17,6 @@ resource "aws_route_table" "Sarath_routing" {
         gateway_id = "var.vpc_RT"
     }
     tags = {
-        Name = "Sarath RT"
+        Name = "Sarath_RT"
     }
 }
