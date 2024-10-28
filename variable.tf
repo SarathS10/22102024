@@ -1,4 +1,4 @@
 variable "cidr_no" {
-  type = string
+  type = number
   default = "10.0.0.0/16"
 }
