@@ -57,3 +57,27 @@ resource "aws_route_table_association" "b" {
   subnet_id      = "subnet-07bb4d45b9d15a8ff"
   route_table_id = "rtb-07a1a9aff726d91af"
 }
+resource "aws_instance" "my_instance3" {
+  ami           = var.image_id
+  instance_type = var.instance_type
+  subnet_id = "subnet-07bb4d45b9d15a8ff"
+  tags = {
+    Name = "My Instance_private"
+  }
+}
+resource "aws_instance" "my_instance1" {
+  ami           = var.image_id
+  instance_type = var.instance_type
+  subnet_id = "subnet-07283665af9088b73"
+  tags = {
+    Name = "My Instance_1Pub"
+  }
+}
+resource "aws_instance" "my_instance2" {
+  ami           = var.image_id
+  instance_type = var.instance_type
+  subnet_id = "subnet-0729db33d757804bf"
+  tags = {
+    Name = "My Instance_2Pub"
+  }
+}
