@@ -6,7 +6,7 @@ variable "vpc_RT" {
   type = string
   default = "igw-0395068cdf32e1ac9"
 }
-variable "region" {
+variable "access_1" {
   type = string
   default = "us-east-1"
 }
