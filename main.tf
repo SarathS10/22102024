@@ -5,14 +5,14 @@ resource "aws_vpc" "VPC" {
   }
 }
 resource "aws_internet_gateway" "gw" {
-  vpc_id = "var.vpc-main"
+  vpc_id = "vpc-0cbbf95b2ff5f575a"
 
   tags = {
     Name = "main"
   }
 }
 resource "aws_route_table" "example" {
-    vpc_id = "var.vpc-main"
+    vpc_id = "vpc-0cbbf95b2ff5f575a"
     route {
         cidr_block = "0.0.0.0/0"
         gateway_id = "var.vpc-gateway"
@@ -22,7 +22,7 @@ resource "aws_route_table" "example" {
     }
 }
 resource "aws_subnet" "big" {
-  vpc_id     = "var.vpc-main"
+  vpc_id     = "vpc-0cbbf95b2ff5f575a"
   cidr_block = "10.0.1.0/24"
   availability_zone = "us-east-1a"
   tags = {
@@ -30,7 +30,7 @@ resource "aws_subnet" "big" {
   }
 }
 resource "aws_subnet" "small" {
-  vpc_id     = "var.vpc-main"
+  vpc_id     = "vpc-0cbbf95b2ff5f575a"
   cidr_block = "10.0.2.0/24"
   availability_zone = "us-east-1a"
   tags = {
@@ -38,7 +38,7 @@ resource "aws_subnet" "small" {
   }
 }
 resource "aws_subnet" "logic" {
-  vpc_id     = "var.vpc-main"
+  vpc_id     = "vpc-0cbbf95b2ff5f575a"
   cidr_block = "10.0.3.0/24"
   availability_zone = "us-east-1a"
   tags = {
