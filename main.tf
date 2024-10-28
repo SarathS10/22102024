@@ -23,7 +23,7 @@ resource "aws_route_table" "V_rt" {
 resource "aws_subnet" "P_1" {
   vpc_id     = "vpc_IGW"
   cidr_block = "10.0.1.0/24"
-  availability_zone = "region"
+  availability_zone = "access_1"
   tags = {
     Name = "Sarath_pubS_1"
   }
@@ -31,7 +31,7 @@ resource "aws_subnet" "P_1" {
 resource "aws_subnet" "P_2" {
   vpc_id     = "vpc_IGW"
   cidr_block = "10.0.2.0/24"
-  availability_zone = "region"
+  availability_zone = "access_1"
   tags = {
     Name = "Sarath_pubS_2"
   }
@@ -39,7 +39,7 @@ resource "aws_subnet" "P_2" {
 resource "aws_subnet" "Secret_p" {
   vpc_id     = "vpc_IGW"
   cidr_block = "10.0.3.0/24"
-  availability_zone = "region"
+  availability_zone = "access_1"
   tags = {
     Name = "Sarath_Private"
   }
