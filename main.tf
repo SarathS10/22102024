@@ -10,3 +10,13 @@ resource "aws_internet_gateway" "IGW" {
     Name = "Internet Gateway"
   }
 }
+resource "aws_route_table" "Route table" {
+    vpc_id = "var.vpc_IGW"
+    route {
+        cidr_block = "0.0.0.0/0"
+        gateway_id = "var.vpc_RT"
+    }
+    tags = {
+        Name = "Sarath RT"
+    }
+}
