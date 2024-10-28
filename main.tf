@@ -4,3 +4,9 @@ resource "aws_vpc" "VPC" {
     Name = "Sarath"
   }
 }
+resource "aws_internet_gateway" "IGW" {
+  vpc_id ="vpc-0cbbf95b2ff5f575a"
+  tags = {
+    Name = "Internet Gateway"
+  }
+}
