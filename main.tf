@@ -20,3 +20,27 @@ resource "aws_route_table" "Sarath_routing" {
         Name = "Sarath_RT"
     }
 }
+resource "aws_subnet" "public_1" {
+  vpc_id     = "vpc_IGW"
+  cidr_block = "10.0.1.0/24"
+  availability_zone = "region"
+  tags = {
+    Name = "Sarath_pubS_1"
+  }
+}
+resource "aws_subnet" "public_2" {
+  vpc_id     = "vpc_IGW"
+  cidr_block = "10.0.2.0/24"
+  availability_zone = "region"
+  tags = {
+    Name = "Sarath_pubS_2"
+  }
+}
+resource "aws_subnet" "private" {
+  vpc_id     = "vpc_IGW"
+  cidr_block = "var.number_Cr"
+  availability_zone = "region"
+  tags = {
+    Name = "Sarath_Private"
+  }
+}
