@@ -4,13 +4,13 @@ resource "aws_vpc" "VPC" {
     Name = "Sarath"
   }
 }
-resource "aws_internet_gateway" "IGW" {
+resource "aws_internet_gateway" "sarath_G" {
   vpc_id ="var.vpc_IGW"
   tags = {
     Name = "Internet Gateway"
   }
 }
-resource "aws_route_table" "Sarath_routing" {
+resource "aws_route_table" "V_rt" {
     vpc_id = "var.vpc_IGW"
     route {
         cidr_block = "0.0.0.0/0"
@@ -20,7 +20,7 @@ resource "aws_route_table" "Sarath_routing" {
         Name = "Sarath_RT"
     }
 }
-resource "aws_subnet" "public_1" {
+resource "aws_subnet" "P_1" {
   vpc_id     = "vpc_IGW"
   cidr_block = "10.0.1.0/24"
   availability_zone = "region"
@@ -28,7 +28,7 @@ resource "aws_subnet" "public_1" {
     Name = "Sarath_pubS_1"
   }
 }
-resource "aws_subnet" "public_2" {
+resource "aws_subnet" "P_2" {
   vpc_id     = "vpc_IGW"
   cidr_block = "10.0.2.0/24"
   availability_zone = "region"
@@ -36,7 +36,7 @@ resource "aws_subnet" "public_2" {
     Name = "Sarath_pubS_2"
   }
 }
-resource "aws_subnet" "private" {
+resource "aws_subnet" "Secret_p" {
   vpc_id     = "vpc_IGW"
   cidr_block = "10.0.3.0/24"
   availability_zone = "region"
