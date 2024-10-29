@@ -32,5 +32,5 @@ variable "sub3_value" {
 }
 variable "RT_value" {
   type = string
-  default = "rtb-07a1a9aff726d91af"
+  default = "rtb-0b05abc6e4d81975e"
 }
