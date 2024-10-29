@@ -12,7 +12,7 @@ variable "vpc_value" {
 }
 variable "gate_value" {
   type = string
-  default = "igw-06b2beccfca006d1e"
+  default = "igw-01cba81e91817a8f2"
 }
 variable "find_loc" {
   type = string
@@ -20,15 +20,15 @@ variable "find_loc" {
 }
 variable "sub_value" {
   type = string
-  default = "subnet-0729db33d757804bf"
+  default = "subnet-07d1f74a41a242670"
 }
 variable "sub2_value" {
   type = string
-  default = "subnet-07283665af9088b73"
+  default = "subnet-04d7854f258fd9d2b"
 }
 variable "sub3_value" {
   type = string
-  default = "subnet-07bb4d45b9d15a8ff"
+  default = "subnet-0a77f46dba0e882dc"
 }
 variable "RT_value" {
   type = string
