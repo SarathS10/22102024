@@ -81,3 +81,4 @@ resource "aws_instance" "my_instance2" {
     Name = "My Instance_2Pub"
   }
 }
+#this is for exMPLE LIN
