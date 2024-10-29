@@ -8,7 +8,7 @@ variable "instance_type" {
 }
 variable "vpc_value" {
   type = string
-  default = "vpc-0cbbf95b2ff5f575a"
+  default = "vpc-0e0efc53702a861ad"
 }
 variable "gate_value" {
   type = string
