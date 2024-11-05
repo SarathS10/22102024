@@ -1,4 +1,4 @@
-output "vpc-054fbe0b2d95e5cdd" {
+output "vpc_id" {
   description = "VPC ID"
-  value       = module.vpc.vpc-054fbe0b2d95e5cdd
+  value       = resource.aws_vpc.VPC.id
 }
