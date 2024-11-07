@@ -4,4 +4,4 @@ resource "aws_vpc" "VPC" {
     Name = "Sarath vpc"
   }
 }
-# instance
+# instance of vpc
