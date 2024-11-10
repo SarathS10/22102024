@@ -1,4 +1,4 @@
-output "vpc_id" {
-  description = "VPC of ID"
-  value       = resource.aws_vpc.VPC.id
+output "ins_id" {
+  description = "ins of ID"
+  value       = resource.aws_instance.app.server
 }
