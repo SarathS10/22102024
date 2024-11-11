@@ -1,7 +1,6 @@
 resource "aws_instance" "hello" {
-  ami           = var.image_id
+  ami           = "ami-063d43db0594b521b"
   instance_type = var.instance_type
-  security_groups = data.aws_security_groups.New 
   tags = {
     Name = "HelloEC2"
   }
