@@ -13,7 +13,7 @@ module "ec2-instance" {
   ami = data.aws_ami.ami19.id
   availability_zone = var.location
   instance_type = var.instance_type
-  instance_tags = var.poc
+  instance_tags = {var.poc}
  
 }
 
@@ -22,5 +22,5 @@ module "vpc" {
   version = "5.15.0"
   cidr = "10.0.0.0/16"
   default_vpc_name = null
-  default_vpc_tags = sarath
+  
 }
