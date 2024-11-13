@@ -4,7 +4,7 @@ variable "instance_type" {
 }
 variable "location" {
   type = string
-  default = "us-east-1"
+  default = "us-east-2"
 }
 variable "vpc" {
   type = string
