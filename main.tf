@@ -7,3 +7,20 @@ resource "aws_instance" "welcome" {
   }
 }
 
+module "ec2-instance" {
+  source  = "terraform-aws-modules/ec2-instance/aws"
+  version = "5.7.1"
+  ami = data.aws_ami.ami19.id
+  availability_zone = var.location
+  instance_type = var.instance_type
+  instance_tags = var.poc
+  tags = {app}
+}
+
+module "vpc" {
+  source  = "terraform-aws-modules/vpc/aws"
+  version = "5.15.0"
+  cidr = "10.0.0.0/16"
+  default_vpc_name = null
+  default_vpc_tags = sarath
+}
