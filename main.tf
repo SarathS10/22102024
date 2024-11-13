@@ -22,7 +22,9 @@ module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "5.15.0"
   cidr = "10.0.0.0/16"
+  private_subnet = ["private"]
   }
+
 module "security-group" {
   source  = "terraform-aws-modules/security-group/aws"
   version = "5.2.0"
