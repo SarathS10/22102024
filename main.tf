@@ -12,6 +12,7 @@ module "ec2-instance" {
   ami = data.aws_ami.ami19.id
   instance_type = var.instance_type
   vpc_security_group_ids =[module.security-group.security_group_id]
+  subnet_id = "subnet-0cfcf42c4e7efde23"
   tags ={
     Name = "sarath"
   }
