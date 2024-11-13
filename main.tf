@@ -16,11 +16,9 @@ module "ec2-instance" {
   tags ={
     Name = "sarath"
   }
-  instance_tags={
-    Created = POC
+  instance_tags={"POC"}
   }
  
-}
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "5.15.0"
