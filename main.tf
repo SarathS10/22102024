@@ -14,7 +14,7 @@ module "ec2-instance" {
   availability_zone = var.location
   instance_type = var.instance_type
   instance_tags = var.poc
-  tags = {app}
+ 
 }
 
 module "vpc" {
