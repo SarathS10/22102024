@@ -23,4 +23,10 @@ module "vpc" {
   version = "5.15.0"
   cidr = "10.0.0.0/16"
   }
-  
+module "security-group" {
+  source  = "terraform-aws-modules/security-group/aws"
+  version = "5.2.0"
+  description = "management"
+  vpc_id = "vpc-0f0721d04dd8e7b84"
+  name = "Nan"
+}
