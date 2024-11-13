@@ -8,7 +8,7 @@ variable "location" {
 }
 variable "vpc" {
   type = string
-  default = "vpc-0f0721d04dd8e7b84"
+  default = "vpc-03902a0d142c08202"
 }
 
 
