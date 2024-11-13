@@ -28,6 +28,6 @@ module "security-group" {
   source  = "terraform-aws-modules/security-group/aws"
   version = "5.2.0"
   description = "management"
-  vpc_id = var.vpc
+  vpc_id = [module.security-group.security_group_vpc_id]
   name = "Nan"
 }
