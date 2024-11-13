@@ -4,7 +4,7 @@ output "ins_id" {
 }
 output "sg_id" {
   description = "security of ID"
-  value       = module.security-group.id
+  value       = module.security-group.security_group_id
 }
 
 
