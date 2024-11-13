@@ -10,7 +10,6 @@ module "ec2-instance" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "5.7.1"
   ami = data.aws_ami.ami19.id
-  availability_zone = var.location
   instance_type = var.instance_type
   vpc_security_group_ids =[module.security-group.security_group_id]
   tags ={
@@ -23,7 +22,7 @@ module "vpc" {
   version = "5.15.0"
   cidr = "10.0.0.0/16"
   private_subnets = ["10.0.1.0/24"]
-  azs = var.location
+  azs = ["us-east-2a"]
 
   tags={
     Name = "sub"
