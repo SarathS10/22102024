@@ -13,7 +13,9 @@ module "ec2-instance" {
   ami = data.aws_ami.ami19.id
   availability_zone = var.location
   instance_type = var.instance_type
-  instance_tags = "Created"
+  tags ={
+    Name = "sarath"
+  }
  
 }
 
