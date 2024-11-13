@@ -12,12 +12,12 @@ module "ec2-instance" {
   ami = data.aws_ami.ami19.id
   availability_zone = var.location
   instance_type = var.instance_type
+  vpc_security_group_ids =[module.security-group.security_group_id]
   tags ={
     Name = "sarath"
   }
  
 }
-
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
   version = "5.15.0"
@@ -27,6 +27,6 @@ module "security-group" {
   source  = "terraform-aws-modules/security-group/aws"
   version = "5.2.0"
   description = "management"
-  vpc_id = "vpc-0f0721d04dd8e7b84"
+  vpc_id = var.vpc
   name = "Nan"
 }
