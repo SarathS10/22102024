@@ -3,7 +3,3 @@ output "ins_id" {
   value       = resource.aws_instance.welcome.id
 }
 
-output "vpc_s" {
-  description = "vpcof ID"
-  value       = module.vpc.id
-}
