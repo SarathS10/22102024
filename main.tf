@@ -16,7 +16,6 @@ module "ec2-instance" {
   tags ={
     Name = "sarath"
   }
-  instance_tags={"POC"}
   }
  
 module "vpc" {
