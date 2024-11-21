@@ -37,9 +37,3 @@ module "security-group" {
   vpc_id = module.vpc.vpc_id
   name = "Nan"
 }
-module "eks" {
-  source  = "terraform-aws-modules/eks/aws"
-  version = "20.29.0"
-  cluster_name = "Sarath"
-
-}
