@@ -40,7 +40,6 @@ module "security-group" {
 module "eks" {
   source  = "terraform-aws-modules/eks/aws"
   version = "20.29.0"
-  cluster_security_group_id =[module.security-group.security_group_id]
   cluster_name = "sarath"
   subnet_ids = "subnet-02b4f9d5ee1df9882"
   vpc_id = module.vpc.vpc_id
