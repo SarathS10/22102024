@@ -12,7 +12,7 @@ module "ec2-instance" {
   ami = data.aws_ami.ami19.id
   instance_type = var.instance_type
   vpc_security_group_ids =[module.security-group.security_group_id]
-  subnet_id = "subnet-0cfcf42c4e7efde23"
+  subnet_id = "subnet-02b4f9d5ee1df9882"
   tags ={
     Name = "sarath"
   }
@@ -30,10 +30,20 @@ module "vpc" {
   }
   }
 
-module "security-group" {
+[module "security-group" {
   source  = "terraform-aws-modules/security-group/aws"
   version = "5.2.0"
   description = "management"
   vpc_id = module.vpc.vpc_id
   name = "Nan"
+}
+module "eks" {
+  source  = "terraform-aws-modules/eks/aws"
+  version = "20.29.0"
+  cluster_security_group_id =[module.security-group.security_group_id]
+  cluster_name = "sarath"
+  subnet_ids = "subnet-02b4f9d5ee1df9882"
+  vpc_id = module.vpc.vpc_id
+
+
 }
