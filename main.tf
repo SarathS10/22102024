@@ -41,9 +41,6 @@ module "eks" {
   source  = "terraform-aws-modules/eks/aws"
   version = "20.29.0"
   cluster_name = "Sarath"
-  cluster_tags  {
-  name = "eks"
- }
  cluster_version = "1.27"
 
 }
